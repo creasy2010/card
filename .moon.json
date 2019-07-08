@@ -1,0 +1,50 @@
+{
+  "type": "taro-redux",
+  "api": {
+    "swaggerUrl": "http://172.19.26.161:8790/v2/api-docs",
+    "dir": "./src/webapi",
+    "mock": {
+      "mockApi": {
+        "CouponInfoController": [],
+        "CouponCodeBaseController": [],
+        "PetCouponInfoController": [],
+        "AuthorizeController": [],
+        "CustomerBaseController": [
+          "checkToken",
+          "findCustomerBaseInfo",
+          "updateCustomerBaseInfo",
+          "findCustomerCenterInfo",
+          "getCustomerBaseInfo",
+          "findCustomerMobile",
+          "sendVerifiedCode",
+          "sendVerifiedCodeNew",
+          "changeNewMobile",
+          "validateVerifiedCode"
+        ],
+        "StoreCustomerController": []
+      },
+      "ignoreApi": {
+        "QQServiceController": [""],
+        "CouponInfoController": [],
+        "GoodsInfoBaseController": [
+          "addDistributorGoods",
+          "shopSkuList",
+          "list",
+          "unLoginList",
+          "shopSkuListToC",
+          "skuListFront"
+        ]
+      }
+    },
+    "include": [
+      "StoreCustomerController",
+      "AuthorizeController",
+      "CouponInfoController",
+      "CouponCodeBaseController",
+      "PetCouponInfoController",
+      "StoreCustomerController",
+      "CustomerBaseController"
+    ],
+    "exclude": ["TradeSettingController"]
+  }
+}

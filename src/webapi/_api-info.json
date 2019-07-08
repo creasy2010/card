@@ -1,0 +1,263 @@
+{
+  "AuthorizeController": {
+    "fileName": "AuthorizeController",
+    "methods": {
+      "authorize": {
+        "responseTs": [
+          "ThirdLoginResponse",
+          "WechatBaseInfoResponse",
+          "LoginResponse",
+          "GetRegisterOrStoreCouponResponse",
+          "GetCouponGroupResponse[]",
+          "GetCouponGroupResponse",
+          "CustomerDetailVO",
+          "CustomerVO",
+          "null",
+          "DistributeChannel",
+          "StoreCustomerRelaVO[]",
+          "StoreCustomerRelaVO"
+        ]
+      },
+      "authorizePhoneLogin": {
+        "responseTs": [
+          "ThirdLoginResponse",
+          "WechatBaseInfoResponse",
+          "LoginResponse",
+          "GetRegisterOrStoreCouponResponse",
+          "GetCouponGroupResponse[]",
+          "GetCouponGroupResponse",
+          "CustomerDetailVO",
+          "CustomerVO",
+          "null",
+          "DistributeChannel",
+          "StoreCustomerRelaVO[]",
+          "StoreCustomerRelaVO"
+        ]
+      }
+    }
+  },
+  "CouponCodeBaseController": {
+    "fileName": "CouponCodeBaseController",
+    "methods": {
+      "checkoutCoupons": {
+        "responseTs": [
+          "CouponCheckoutResponse",
+          "CheckGoodsInfoVO[]",
+          "CheckGoodsInfoVO"
+        ]
+      },
+      "customerFetchCoupon": {
+        "responseTs": []
+      },
+      "listMyCouponList": {
+        "responseTs": [
+          "CouponCodePageResponse",
+          "MicroServicePageCouponCodeVO",
+          "CouponCodeVO[]",
+          "CouponCodeVO",
+          "Sort"
+        ]
+      }
+    }
+  },
+  "CouponInfoController": {
+    "fileName": "CouponInfoController",
+    "methods": {
+      "getCouponStarted": {
+        "responseTs": [
+          "CouponCacheCenterPageResponse",
+          "{\n    [k: string]: string;\n  }",
+          "MicroServicePageCouponVO",
+          "CouponVO[]",
+          "CouponVO",
+          "Sort"
+        ]
+      },
+      "listGoodsByCouponId": {
+        "responseTs": [
+          "CouponGoodsPageResponse",
+          "CouponGoodsListResponse",
+          "{\n    [k: string]: string;\n  }",
+          "EsGoodsInfoResponse",
+          "GoodsBrandVO[]",
+          "GoodsBrandVO",
+          "GoodsCateVO[]",
+          "GoodsCateVO",
+          "GoodsCateVO1[]",
+          "GoodsCateVO1",
+          "GoodsCatePropVO[]",
+          "GoodsCatePropVO",
+          "GoodsPropDetailVO[]",
+          "GoodsPropDetailVO",
+          "PageEsGoodsInfo",
+          "EsGoodsInfo[]",
+          "EsGoodsInfo",
+          "GoodsCustomerPriceNest[]",
+          "GoodsCustomerPriceNest",
+          "GoodsInfoNest",
+          "CouponLabelVO[]",
+          "CouponLabelVO",
+          "MarketingLabelVO[]",
+          "MarketingLabelVO",
+          "GoodsLevelPriceNest[]",
+          "GoodsLevelPriceNest",
+          "GoodsPropDetailRelNest[]",
+          "GoodsPropDetailRelNest",
+          "GoodsInfoSpecDetailRelNest[]",
+          "GoodsInfoSpecDetailRelNest",
+          "Sort2",
+          "GoodsIntervalPriceVO[]",
+          "GoodsIntervalPriceVO",
+          "GoodsVO[]",
+          "GoodsVO",
+          "GoodsSpecDetailVO[]",
+          "GoodsSpecDetailVO",
+          "GoodsSpecVO[]",
+          "GoodsSpecVO"
+        ]
+      },
+      "getCouponStartedFront": {
+        "responseTs": [
+          "CouponCacheCenterPageResponse",
+          "{\n    [k: string]: string;\n  }",
+          "MicroServicePageCouponVO",
+          "CouponVO[]",
+          "CouponVO",
+          "Sort"
+        ]
+      },
+      "listCouponForGoodsDetailFront": {
+        "responseTs": [
+          "CouponCacheListForGoodsListResponse",
+          "CouponVO2[]",
+          "CouponVO2",
+          "{\n    [k: string]: string;\n  }"
+        ]
+      },
+      "listCouponForGoodsListFront": {
+        "responseTs": [
+          "CouponCacheListForGoodsListResponse",
+          "CouponVO2[]",
+          "CouponVO2",
+          "{\n    [k: string]: string;\n  }"
+        ]
+      },
+      "listCouponForGoodsDetail": {
+        "responseTs": [
+          "CouponCacheListForGoodsListResponse",
+          "CouponVO2[]",
+          "CouponVO2",
+          "{\n    [k: string]: string;\n  }"
+        ]
+      },
+      "listCouponForGoodsList": {
+        "responseTs": [
+          "CouponCacheListForGoodsListResponse",
+          "CouponVO2[]",
+          "CouponVO2",
+          "{\n    [k: string]: string;\n  }"
+        ]
+      }
+    }
+  },
+  "CustomerBaseController": {
+    "fileName": "CustomerBaseController",
+    "methods": {
+      "checkToken": {
+        "responseTs": []
+      },
+      "findCustomerBaseInfo": {
+        "responseTs": [
+          "CustomerBaseInfoResponse"
+        ]
+      },
+      "updateCustomerBaseInfo": {
+        "responseTs": []
+      },
+      "findCustomerCenterInfo": {
+        "responseTs": [
+          "CustomerCenterResponse"
+        ]
+      },
+      "getCustomerBaseInfo": {
+        "responseTs": [
+          "CustomerDetailVO",
+          "CustomerVO",
+          "null",
+          "DistributeChannel",
+          "StoreCustomerRelaVO[]",
+          "StoreCustomerRelaVO"
+        ]
+      },
+      "findCustomerMobile": {
+        "responseTs": [
+          "CustomerSafeResponse"
+        ]
+      },
+      "sendVerifiedCode": {
+        "responseTs": []
+      },
+      "getLoginCustomerInfo": {
+        "responseTs": [
+          "CustomerGetByIdResponse",
+          "CustomerDetailVO2",
+          "CustomerVO",
+          "null",
+          "DistributeChannel",
+          "StoreCustomerRelaVO[]",
+          "StoreCustomerRelaVO",
+          "DistributeChannel2",
+          "StoreCustomerRelaVO2[]",
+          "StoreCustomerRelaVO2"
+        ]
+      },
+      "sendVerifiedCodeNew": {
+        "responseTs": []
+      },
+      "changeNewMobile": {
+        "responseTs": []
+      },
+      "validateVerifiedCode": {
+        "responseTs": []
+      }
+    }
+  },
+  "PetCouponInfoController": {
+    "fileName": "PetCouponInfoController",
+    "methods": {
+      "getCouponStarted": {
+        "responseTs": [
+          "CouponCacheCenterPageResponse",
+          "{\n    [k: string]: string;\n  }",
+          "MicroServicePageCouponVO",
+          "CouponVO[]",
+          "CouponVO",
+          "Sort"
+        ]
+      }
+    }
+  },
+  "StoreCustomerController": {
+    "fileName": "StoreCustomerController",
+    "methods": {
+      "entryWithLogin": {
+        "responseTs": [
+          "EntryStoreResponse",
+          "StoreBaseResponse",
+          "StoreEvaluateSumVO",
+          "StoreCustomerRelaVO",
+          "null"
+        ]
+      },
+      "entryWithOutLogin": {
+        "responseTs": [
+          "EntryStoreResponse",
+          "StoreBaseResponse",
+          "StoreEvaluateSumVO",
+          "StoreCustomerRelaVO",
+          "null"
+        ]
+      }
+    }
+  }
+}
