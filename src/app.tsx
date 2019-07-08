@@ -24,14 +24,7 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      "pages/entry/index",
-      "pages/index/index",
-      "pages/coupon/info/index",
-      "pages/coupon/list/index",
-      "pages/test1/index",
-      "pages/goods/info/index",
-      "pages/customer/personalCenter/index",
-      "pages/customer/myCoupon/index"
+      "pages/index/index"
     ],
     window: {
       // backgroundTextStyle: "light",
