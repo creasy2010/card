@@ -69,26 +69,26 @@ class Index extends Component<PageOwnProps, PageState> {
   };
 
   componentWillReceiveProps(nextProps) {
-    console.log(this.props, nextProps);
+    // console.log(this.props, nextProps);
   }
 
   componentWillUnmount() {}
 
   componentDidShow() {
-    var _this = this;
+    // var _this = this;
     //@ts-ignore
-    wx.login({
-      async success(res) {
-        // debugger;
-        if (res.code) {
-          _this.setState({
-            code: res.code
-          });
-        } else {
-          console.log("登录失败！" + res.errMsg);
-        }
-      }
-    });
+    // wx.login({
+    //   async success(res) {
+    //     // debugger;
+    //     if (res.code) {
+    //       _this.setState({
+    //         code: res.code
+    //       });
+    //     } else {
+    //       console.log("登录失败！" + res.errMsg);
+    //     }
+    //   }
+    // });
   }
 
   componentDidHide() {}
@@ -101,25 +101,25 @@ class Index extends Component<PageOwnProps, PageState> {
     );
   }
 
-  _getCode = (): Promise<string> => {
-    var _this = this;
-    return new Promise((resolve, reject) => {
-      //@ts-ignore
-      wx.login({
-        async success(res) {
-          if (res.code) {
-            _this.setState({
-              code: res.code
-            });
-            resolve(res.code);
-          } else {
-            reject(res.errMsg);
-            console.log("登录失败！" + res.errMsg);
-          }
-        }
-      });
-    });
-  };
+  // _getCode = (): Promise<string> => {
+  //   var _this = this;
+  //   return new Promise((resolve, reject) => {
+  //     //@ts-ignore
+  //     wx.login({
+  //       async success(res) {
+  //         if (res.code) {
+  //           _this.setState({
+  //             code: res.code
+  //           });
+  //           resolve(res.code);
+  //         } else {
+  //           reject(res.errMsg);
+  //           console.log("登录失败！" + res.errMsg);
+  //         }
+  //       }
+  //     });
+  //   });
+  // };
 }
 
 // #region 导出注意
