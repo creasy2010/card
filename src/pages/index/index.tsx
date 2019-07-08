@@ -11,7 +11,7 @@ import Taro, { Component, Config } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
 import api from "api";
 
-import { add, minus, asyncAdd } from "../../actions/counter";
+// import { add, minus, asyncAdd } from "../../actions/counter";
 
 import "./index.less";
 

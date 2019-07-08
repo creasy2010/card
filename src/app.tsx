@@ -33,25 +33,25 @@ class App extends Component {
       navigationBarTextStyle: "black",
       backgroundTextStyle: "dark"
     },
-    tabBar: {
-      backgroundColor: "#FFFFFF",
-      selectedColor: "#FF6600",
-      borderStyle: "white",
-      list: [
-        {
-          pagePath: "pages/coupon/list/index",
-          selectedIconPath: "assets/image/storeCoupon.png",
-          iconPath: "assets/image/storeCoupon2.png",
-          text: "首页"
-        },
-        {
-          pagePath: "pages/customer/personalCenter/index",
-          selectedIconPath: "assets/image/myself2.png",
-          iconPath: "assets/image/myself.png",
-          text: "我的"
-        }
-      ]
-    }
+    // tabBar: {
+    //   backgroundColor: "#FFFFFF",
+    //   selectedColor: "#FF6600",
+    //   borderStyle: "white",
+    //   list: [
+    //     {
+    //       pagePath: "pages/coupon/list/index",
+    //       selectedIconPath: "assets/image/storeCoupon.png",
+    //       iconPath: "assets/image/storeCoupon2.png",
+    //       text: "首页"
+    //     },
+    //     {
+    //       pagePath: "pages/customer/personalCenter/index",
+    //       selectedIconPath: "assets/image/myself2.png",
+    //       iconPath: "assets/image/myself.png",
+    //       text: "我的"
+    //     }
+    //   ]
+    // }
   };
 
   componentDidMount() {}
