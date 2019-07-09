@@ -40,22 +40,6 @@ interface Index {
   props: IProps;
 }
 
-@connect(
-  ({ counter }) => ({
-    counter
-  }),
-  dispatch => ({
-    add() {
-      dispatch(add());
-    },
-    dec() {
-      dispatch(minus());
-    },
-    asyncAdd() {
-      dispatch(asyncAdd());
-    }
-  })
-)
 class Index extends Component<PageOwnProps, PageState> {
   /**
    * 指定config的类型声明为: Taro.Config
@@ -65,7 +49,7 @@ class Index extends Component<PageOwnProps, PageState> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: "首页"
+    navigationBarTitleText: "首席名片"
   };
 
   componentWillReceiveProps(nextProps) {
