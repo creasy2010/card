@@ -4,10 +4,11 @@ import {
   Text,
   Switch,
   Textarea,
-  Input,Canvas
+  Input,Canvas,Swiper, SwiperItem
 } from "@tarojs/components";
+
 import { ComponentClass } from "react";
-import Taro, { Component, Config } from "@tarojs/taro";
+import Taro, { Component, Config, } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
 import api from "api";
 
@@ -40,6 +41,17 @@ interface Index {
   props: IProps;
 }
 
+
+var rpx=2;
+//获取屏幕宽度，获取自适应单位
+//@ts-ignore
+wx.getSystemInfo({
+  success: function(res) {
+    console.log(res);
+    rpx = res.windowWidth/375;
+  },
+})
+
 class Index extends Component<PageOwnProps, PageState> {
   /**
    * 指定config的类型声明为: Taro.Config
@@ -68,7 +80,7 @@ class Index extends Component<PageOwnProps, PageState> {
     ctx.fillStyle ="#0272FC";
     ctx.beginPath();
     ctx.moveTo(0,0);
-    ctx.quadraticCurveTo(187.5,125,375,0);
+    ctx.quadraticCurveTo(187.5*rpx,125*rpx,375*rpx,0);
     ctx.closePath();
 
     ctx.fill();
@@ -84,7 +96,33 @@ class Index extends Component<PageOwnProps, PageState> {
   render() {
     return (
       <View className="index">
-        <Canvas style='width: 750px; height: 250px;' canvasId='topBack' />
+
+        <View className={"header"}>
+          <Canvas
+            className={'topBack'}
+            canvasId='topBack' />
+        </View>
+
+        <View className={"swiper"}>
+          <Swiper
+            className='test-h'
+            indicatorColor='#999'
+            indicatorActiveColor='#333'
+            circular
+            indicatorDots
+            autoplay>
+            <SwiperItem>
+              <View className='demo-text-1'>1</View>
+            </SwiperItem>
+            <SwiperItem>
+              <View className='demo-text-2'>2</View>
+            </SwiperItem>
+            <SwiperItem>
+              <View className='demo-text-3'>3</View>
+            </SwiperItem>
+          </Swiper>
+        </View>
+        {/*<Button>创建名片</Button>*/}
       </View>
     );
   }
