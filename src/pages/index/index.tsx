@@ -4,7 +4,7 @@ import {
   Text,
   Switch,
   Textarea,
-  Input
+  Input,Canvas
 } from "@tarojs/components";
 import { ComponentClass } from "react";
 import Taro, { Component, Config } from "@tarojs/taro";
@@ -49,7 +49,7 @@ class Index extends Component<PageOwnProps, PageState> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: "首席名片"
+    navigationBarTitleText: "1111"
   };
 
   componentWillReceiveProps(nextProps) {
@@ -58,21 +58,25 @@ class Index extends Component<PageOwnProps, PageState> {
 
   componentWillUnmount() {}
 
-  componentDidShow() {
-    // var _this = this;
+  componentDidMount(){
     //@ts-ignore
-    // wx.login({
-    //   async success(res) {
-    //     // debugger;
-    //     if (res.code) {
-    //       _this.setState({
-    //         code: res.code
-    //       });
-    //     } else {
-    //       console.log("登录失败！" + res.errMsg);
-    //     }
-    //   }
-    // });
+    var ctx = wx.createCanvasContext('topBack');
+
+    // 二次贝塞尔曲线
+    ctx.lineWidth=4.5;
+    ctx.strokeStyle='#0272FC';
+    ctx.fillStyle ="#0272FC";
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.quadraticCurveTo(187.5,125,375,0);
+    ctx.closePath();
+
+    ctx.fill();
+    ctx.stroke();
+    ctx.draw();
+  }
+
+  componentDidShow() {
   }
 
   componentDidHide() {}
@@ -80,7 +84,7 @@ class Index extends Component<PageOwnProps, PageState> {
   render() {
     return (
       <View className="index">
-      hello..
+        <Canvas style='width: 750px; height: 250px;' canvasId='topBack' />
       </View>
     );
   }

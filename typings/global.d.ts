@@ -14,10 +14,6 @@ declare interface TResult {
 }
 
 
-declare interface Wx {
-  [name:string]:any;
-}
-
 declare interface wx {
   [name:string]:any;
 }
