@@ -96,33 +96,33 @@ class Index extends Component<PageOwnProps, PageState> {
   render() {
     return (
       <View className="index">
-
         <View className={"header"}>
           <Canvas
             className={'topBack'}
             canvasId='topBack' />
         </View>
-
-        <View className={"swiper"}>
-          <Swiper
-            className='test-h'
-            indicatorColor='#999'
-            indicatorActiveColor='#333'
-            circular
-            indicatorDots
-            autoplay>
-            <SwiperItem>
-              <View className='demo-text-1'>1</View>
-            </SwiperItem>
-            <SwiperItem>
-              <View className='demo-text-2'>2</View>
-            </SwiperItem>
-            <SwiperItem>
-              <View className='demo-text-3'>3</View>
-            </SwiperItem>
-          </Swiper>
+        <View className="vbox-hcenter box-center">
+          <View className={"swiperG"}>
+            <Swiper
+              className='swiper'
+              indicatorColor='#999'
+              indicatorActiveColor='#333'
+              circular
+              indicatorDots
+              autoplay>
+              <SwiperItem>
+                <View className='item'>1</View>
+              </SwiperItem>
+              <SwiperItem>
+                <View className='item'>2</View>
+              </SwiperItem>
+              <SwiperItem>
+                <View className='item'>3</View>
+              </SwiperItem>
+            </Swiper>
+          </View>
         </View>
-        {/*<Button>创建名片</Button>*/}
+        <Button>创建名片</Button>
       </View>
     );
   }
