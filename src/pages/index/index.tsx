@@ -1,7 +1,8 @@
 import {
   View,
   Button,
-  Text,
+  Image,
+    Text,
   Switch,
   Textarea,
   Input,Canvas,Swiper, SwiperItem
@@ -12,10 +13,11 @@ import Taro, { Component, Config, } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
 import api from "api";
 
-// import { add, minus, asyncAdd } from "../../actions/counter";
-
 import "./index.less";
 
+
+import example from '@/assets/image/goods.png';
+import CardLabel from "@/common/card-label";
 
 type PageStateProps = {
   counter: {
@@ -79,8 +81,9 @@ class Index extends Component<PageOwnProps, PageState> {
     ctx.strokeStyle='#0272FC';
     ctx.fillStyle ="#0272FC";
     ctx.beginPath();
-    ctx.moveTo(0,0);
-    ctx.quadraticCurveTo(187.5*rpx,125*rpx,375*rpx,0);
+    ctx.rect(0, 0, 375*rpx, 24*rpx);
+    ctx.moveTo(0,24*rpx);
+    ctx.quadraticCurveTo(187.5*rpx,(125+24)*rpx,375*rpx,24*rpx);
     ctx.closePath();
 
     ctx.fill();
@@ -111,7 +114,11 @@ class Index extends Component<PageOwnProps, PageState> {
               indicatorDots
               autoplay>
               <SwiperItem>
-                <View className='item'>1</View>
+                <View className='item vbox-hcenter'>
+                  <Image src={example}></Image>
+                  <CardLabel >个人形象微名片</CardLabel>
+                  <Text>一张好的微名片，做超级IP</Text>
+                </View>
               </SwiperItem>
               <SwiperItem>
                 <View className='item'>2</View>
@@ -121,8 +128,9 @@ class Index extends Component<PageOwnProps, PageState> {
               </SwiperItem>
             </Swiper>
           </View>
+
+          <View className="createBtn hbox-vcenter">创建名片</View>
         </View>
-        <Button>创建名片</Button>
       </View>
     );
   }
