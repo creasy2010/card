@@ -29,6 +29,7 @@ let GolbalStore = createStore(
   composedEnhancers,
 );
 
+let currentReducer =rootReducer;
 //动态注册reducer
 export function registerReducer(reducerMap: {[name: string]: Function}) {
   //判断是否重复.
@@ -40,11 +41,13 @@ export function registerReducer(reducerMap: {[name: string]: Function}) {
     }
   }
 
+  currentReducer={
+    ...rootReducer,
+    ...reducerMap,
+  };
+
   GolbalStore.replaceReducer(
-    combineReducers({
-      ...rootReducer,
-      ...reducerMap,
-    }),
+    combineReducers(currentReducer),
   );
 }
 

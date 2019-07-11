@@ -18,6 +18,7 @@ import "./index.less";
 
 import example from '@/assets/image/goods.png';
 import CardLabel from "@/common/card-label";
+import TopBack from "@/common/top-back";
 
 type PageStateProps = {
   counter: {
@@ -73,7 +74,7 @@ class Index extends Component<PageOwnProps, PageState> {
   componentWillUnmount() {}
 
   componentDidMount(){
-    //@ts-ignore
+    // @ts-ignore
     var ctx = wx.createCanvasContext('topBack');
 
     // 二次贝塞尔曲线
