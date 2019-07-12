@@ -33,6 +33,7 @@ export default class Create extends Component<Partial<T.IProps>, any> {
       <View className="vbox create">
         <StepInfo key={"StepInfo"}  />
         {main.step === 0 ? <Photo key={"photo"} /> : main.step === 1 ? <Info key={"Info"} /> : <Bus key={"Bus"}/>}
+
         {/*<Button onClick={async ()=>{*/}
         {/*let {tempFilePaths,tempFiles}  = await Taro.chooseImage({*/}
         {/*count:1,*/}

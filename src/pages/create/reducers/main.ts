@@ -11,7 +11,7 @@ const INITIAL_STATE: IMainReducer = {
   step:0,
 
   photo: {
-    src:""
+    src:"http://tmp/wxf0aa432bdc9b7248.o6zAJs9X9uyzWAxMmgNiK7oJg8ZA.LQGr5lKT3KlIa6602fdd4201d3b818bcb880ce6f9f1c.png"
   },
 
   info: {},

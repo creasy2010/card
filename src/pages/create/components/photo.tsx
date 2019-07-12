@@ -32,8 +32,9 @@ export default class Photo extends Component<
     return (
       <View className="photo">
         {main.photo.src
-          ? <View>
+          ? <View className="preview">
               <Image src={main.photo.src} />
+              <View>重新上传</View>
             </View>
           :<View className='addArea'>
             <View className="add">
