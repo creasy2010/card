@@ -32,7 +32,7 @@ export default class StepInfo extends Component<
     ]
 
     return (
-      <View className="hbox box-center stepInfo">
+      <View className="stepInfo hbox box-center">
         <AtSteps
             items={items}
             current={this.props.main.step}
