@@ -60,6 +60,9 @@ export default class Create extends Component<Partial<T.IProps>, any> {
         {/*// });*/}
 
         {/*}}>TakePhoto</Button>*/}
+        <View>
+          <CircleButton> 下一步</CircleButton>
+        </View>
       </View>
     );
   }
@@ -68,5 +71,6 @@ export default class Create extends Component<Partial<T.IProps>, any> {
 //==动态注入reducer===
 
 import createMain from './reducers/main';
+import CircleButton from "@/common/circle-button";
 
 registerReducer({createMain});
