@@ -35,7 +35,8 @@ export default class Photo extends Component<
           ? <View>
               <Image src={main.photo.src} />
             </View>
-          : <View className="add">
+          :<View>
+            <View className="add">
               <Button
                 className="submit"
                 onClick={async () => {
@@ -47,7 +48,8 @@ export default class Photo extends Component<
               >
                 <AtIcon value="add" size="30" color="#0272FC" />
               </Button>
-            </View>}
+            </View>
+          </View>}
       </View>
     );
   }
