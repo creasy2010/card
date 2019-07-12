@@ -35,7 +35,7 @@ export default class Photo extends Component<
           ? <View>
               <Image src={main.photo.src} />
             </View>
-          :<View>
+          :<View className='addArea'>
             <View className="add">
               <Button
                 className="submit"
@@ -49,6 +49,9 @@ export default class Photo extends Component<
                 <AtIcon value="add" size="30" color="#0272FC" />
               </Button>
             </View>
+
+            <View className="label1">点击上传照片</View>
+            <View className="label2">建议尺寸640*640</View>
           </View>}
       </View>
     );
