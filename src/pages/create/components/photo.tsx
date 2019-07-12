@@ -23,15 +23,7 @@ export default class Photo extends Component<
   constructor(props: IPhotoProps) {
     super(props);
     this.state = {
-      files: [{
-        url: 'https://jimczj.gitee.io/lazyrepay/aragaki1.jpeg',
-      },
-        {
-          url: 'https://jimczj.gitee.io/lazyrepay/aragaki2.jpeg',
-        },
-        {
-          url: 'https://jimczj.gitee.io/lazyrepay/aragaki3.png',
-        }]
+      files: []
     }
   }
 
@@ -44,18 +36,22 @@ export default class Photo extends Component<
       main,
     } = this.props;
 
+
     return (
-      <View className="photo vbox box-center" >
-        <AtImagePicker
-        files={this.state['files']}
-        onChange={this.onChange}
-      />
-        sfsdfs
+      <View className="photo" >
+        <View className ="add">
+          <Button className="submit" onClick={()=>{
+            console.log('click me!!!');
+          }}>
+
+          </Button>
+        </View>
       </View>
     );
   }
 
   onChange  =(files)=> {
+    console.log(files);
     this.setState({
       files
     })
