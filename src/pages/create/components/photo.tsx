@@ -7,6 +7,9 @@ import actions from '../actions/index';
 import {connect} from '@tarojs/redux';
 import {store2Props} from '../selectors';
 
+
+import { AtImagePicker } from 'taro-ui'
+
 type IPhotoProps = T.IProps & T.IPhotoProps;
 
 @connect<Partial<IPhotoProps>, T.IPhotoState>(
@@ -19,10 +22,21 @@ export default class Photo extends Component<
 > {
   constructor(props: IPhotoProps) {
     super(props);
+    this.state = {
+      files: [{
+        url: 'https://jimczj.gitee.io/lazyrepay/aragaki1.jpeg',
+      },
+        {
+          url: 'https://jimczj.gitee.io/lazyrepay/aragaki2.jpeg',
+        },
+        {
+          url: 'https://jimczj.gitee.io/lazyrepay/aragaki3.png',
+        }]
+    }
   }
 
   /**
-    
+
 */
   render() {
     let {
@@ -31,9 +45,19 @@ export default class Photo extends Component<
     } = this.props;
 
     return (
-      <View className="photo">
-        <View />
+      <View className="photo vbox box-center" >
+        <AtImagePicker
+        files={this.state['files']}
+        onChange={this.onChange}
+      />
+        sfsdfs
       </View>
     );
+  }
+
+  onChange  =(files)=> {
+    this.setState({
+      files
+    })
   }
 }

@@ -2,6 +2,7 @@ import Actions from './actions';
 
 export interface IMainReducer {
   isReady: boolean;
+  step:0|1|2;
   isLoading?: boolean;
 
   photo: IMainPhoto;
@@ -22,7 +23,8 @@ export type IAllReducerProps = {
 export type IProps = IAllReducerProps & ActionType;
 
 export type IStepInfoProps = {};
-export type IStepInfoState = {};
+export type IStepInfoState = {
+};
 
 export type IPhotoProps = {};
 export type IPhotoState = {};

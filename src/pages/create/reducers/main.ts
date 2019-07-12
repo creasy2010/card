@@ -8,6 +8,8 @@ import * as immerUtil from '@/redux/immer-util';
 const INITIAL_STATE: IMainReducer = {
   isReady: false,
 
+  step:0,
+
   photo: {},
 
   info: {},

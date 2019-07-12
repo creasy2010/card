@@ -13,6 +13,7 @@ import "./app.less";
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
+import 'taro-ui/dist/style/index.scss'
 
 class App extends Component {
   /**
@@ -24,8 +25,8 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      "pages/index/index",
-      'pages/create/index'
+      'pages/create/index',
+      "pages/index/index"
     ],
     window: {
       // backgroundTextStyle: "light",
