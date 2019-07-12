@@ -8,7 +8,7 @@ import {connect} from '@tarojs/redux';
 import {store2Props} from '../selectors';
 
 
-import { AtImagePicker } from 'taro-ui'
+import { AtImagePicker,AtIcon } from 'taro-ui'
 
 type IPhotoProps = T.IProps & T.IPhotoProps;
 
@@ -43,7 +43,7 @@ export default class Photo extends Component<
           <Button className="submit" onClick={()=>{
             console.log('click me!!!');
           }}>
-
+            <AtIcon value='add' size='30' color='#0272FC'></AtIcon>
           </Button>
         </View>
       </View>
