@@ -10,7 +10,9 @@ const INITIAL_STATE: IMainReducer = {
 
   step:0,
 
-  photo: {},
+  photo: {
+    src:""
+  },
 
   info: {},
 

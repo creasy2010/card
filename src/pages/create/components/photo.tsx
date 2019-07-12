@@ -1,4 +1,4 @@
-import {View, Button, Text} from '@tarojs/components';
+import {View, Button, Text, Image} from '@tarojs/components';
 import Taro, {Component, Config} from '@tarojs/taro';
 
 import * as T from '../types';
@@ -7,15 +7,11 @@ import actions from '../actions/index';
 import {connect} from '@tarojs/redux';
 import {store2Props} from '../selectors';
 
-
-import { AtImagePicker,AtIcon } from 'taro-ui'
+import {AtImagePicker, AtIcon} from 'taro-ui';
 
 type IPhotoProps = T.IProps & T.IPhotoProps;
 
-@connect<Partial<IPhotoProps>, T.IPhotoState>(
-  store2Props,
-  actions
-)
+@connect<Partial<IPhotoProps>, T.IPhotoState>(store2Props, actions)
 export default class Photo extends Component<
   Partial<IPhotoProps>,
   T.IPhotoState
@@ -23,37 +19,43 @@ export default class Photo extends Component<
   constructor(props: IPhotoProps) {
     super(props);
     this.state = {
-      files: []
-    }
+      files: [],
+    };
   }
 
   /**
 
 */
   render() {
-    let {
-      actions: {action},
-      main,
-    } = this.props;
-
+    let {actions: {action}, main} = this.props;
 
     return (
-      <View className="photo" >
-        <View className ="add">
-          <Button className="submit" onClick={()=>{
-            console.log('click me!!!');
-          }}>
-            <AtIcon value='add' size='30' color='#0272FC'></AtIcon>
-          </Button>
-        </View>
+      <View className="photo">
+        {main.photo.src
+          ? <View>
+              <Image src={main.photo.src} />
+            </View>
+          : <View className="add">
+              <Button
+                className="submit"
+                onClick={async () => {
+                  let image = await Taro.chooseImage({
+                    count: 1,
+                  });
+                  action.commonChange('main.photo.src', image.tempFilePaths[0]);
+                }}
+              >
+                <AtIcon value="add" size="30" color="#0272FC" />
+              </Button>
+            </View>}
       </View>
     );
   }
 
-  onChange  =(files)=> {
+  onChange = files => {
     console.log(files);
     this.setState({
-      files
-    })
-  }
+      files,
+    });
+  };
 }
