@@ -29,11 +29,13 @@ export default class Photo extends Component<
   render() {
     let {actions: {action}, main} = this.props;
 
+
+    //style={{backgroundImage:"url('./img/a.png')"}}
+    // {/*<Image src={main.photo.src} />*/}
     return (
       <View className="photo">
         {main.photo.src
-          ? <View className="preview">
-              <Image src={main.photo.src} />
+          ? <View className="preview" >
               <View>重新上传</View>
             </View>
           :<View className='addArea'>

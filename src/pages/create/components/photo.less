@@ -64,20 +64,25 @@
   //图片预览
   .preview{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    //justify-content: center;
+    //align-items: center;
+    border-radius: 20px;
     width: 686px;
     height: 686px;
     background-color: red;
 
 
     >View:last-child{
+      margin-left:20px;
+      margin-botton:20px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      left:-24px;
+      top:-24px;
 
       border-radius: 30px;
       width: 144px;
