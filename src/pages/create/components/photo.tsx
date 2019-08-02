@@ -35,9 +35,43 @@ export default class Photo extends Component<
     return (
       <View className="photo">
         {main.photo.src
-          ? <View className="preview" >
+          ? <View>
+            <View className="preview" >
               <View>重新上传</View>
             </View>
+            <View  className="picBtns">
+              <View className={"unit"}>
+                <Image src={""}/>
+                <View className={"title"}>
+                  原图
+                </View>
+              </View>
+              <View className={"unit"}>
+                <Image src={""}/>
+                <View className={"title"}>
+                  滤镜
+                </View>
+              </View>
+              <View className={"unit"}>
+                <Image src={""}/>
+                <View className={"title"}>
+                  素描
+                </View>
+              </View>
+              <View className={"unit"}>
+                <Image src={""}/>
+                <View className={"title"}>
+                  证件
+                </View>
+              </View>
+              <View className={"unit"}>
+                <Image src={""}/>
+                <View className={"title"}>
+                  卡通
+                </View>
+              </View>
+            </View>
+          </View>
           :<View className='addArea'>
             <View className="add">
               <Button
