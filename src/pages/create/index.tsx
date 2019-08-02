@@ -54,33 +54,33 @@ export default class Create extends Component<Partial<T.IProps>, any> {
         <StepInfo key={"StepInfo"}  style={{zIndex:10}} />
         {main.step === 0 ? <Photo key={"photo"} /> : main.step === 1 ? <Info key={"Info"} /> : <Bus key={"Bus"}/>}
 
-        <Button onClick={async ()=>{
-        let {tempFilePaths,tempFiles}  = await Taro.chooseImage({
-        count:1,
-        sizeType:['compressed'],
-        });
-        console.log(tempFilePaths);
-        }}>chooseImage</Button>
+        {/*<Button onClick={async ()=>{*/}
+        {/*let {tempFilePaths,tempFiles}  = await Taro.chooseImage({*/}
+        {/*count:1,*/}
+        {/*sizeType:['compressed'],*/}
+        {/*});*/}
+        {/*console.log(tempFilePaths);*/}
+        {/*}}>chooseImage</Button>*/}
 
-        <Button onClick={async ()=>{
-        let {tempFilePaths,tempFiles}  = await Taro.chooseImage({
-        count:1,
-        sizeType:['compressed'],
-        });
-        console.log(tempFilePaths);
-        // const cameraContext = Taro.createCameraContext();
-        //
-        // cameraContext.takePhoto({
-        //   quality:"normal",
-        //   success:(e1)=>{
-        //
-        //     debugger;
-        //   }, fail:(e1)=>{
-        //     debugger;
-        //   },
-        // });
+        {/*<Button onClick={async ()=>{*/}
+        {/*let {tempFilePaths,tempFiles}  = await Taro.chooseImage({*/}
+        {/*count:1,*/}
+        {/*sizeType:['compressed'],*/}
+        {/*});*/}
+        {/*console.log(tempFilePaths);*/}
+        {/*// const cameraContext = Taro.createCameraContext();*/}
+        {/*//*/}
+        {/*// cameraContext.takePhoto({*/}
+        {/*//   quality:"normal",*/}
+        {/*//   success:(e1)=>{*/}
+        {/*//*/}
+        {/*//     debugger;*/}
+        {/*//   }, fail:(e1)=>{*/}
+        {/*//     debugger;*/}
+        {/*//   },*/}
+        {/*// });*/}
 
-        }}>TakePhoto</Button>
+        {/*}}>TakePhoto</Button>*/}
         <View>
           <CircleButton> 下一步</CircleButton>
         </View>
