@@ -1,4 +1,41 @@
 
 
 .info {
+  width: 686px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0 17px 0;
+
+    >View:nth-child(1){
+      width: 100px;
+      height: 33px;
+      color: rgba(153, 153, 153, 1);
+      font-size: 24px;
+      text-align: center;
+      font-family: PingFang-SC-Regular;
+    }
+    >View:nth-child(2) {
+      width: 150px;
+      height: 33px;
+      color: rgba(2, 114, 252, 1);
+      font-size: 24px;
+      text-align: center;
+      font-family: PingFang-SC-Regular;
+    }
+  }
+
+
+  .form {
+    margin: 42px 5px 10px 5px;
+    //background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 32px 0px rgba(226, 226, 226, 1);
+    border-radius: 10px;
+  }
 }

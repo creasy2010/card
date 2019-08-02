@@ -8,7 +8,7 @@ import * as immerUtil from '@/redux/immer-util';
 const INITIAL_STATE: IMainReducer = {
   isReady: false,
 
-  step:0,
+  step:1,
 
   photo: {
     src:"http://tmp/wxf0aa432bdc9b7248.o6zAJs9X9uyzWAxMmgNiK7oJg8ZA.LQGr5lKT3KlIa6602fdd4201d3b818bcb880ce6f9f1c.png"
