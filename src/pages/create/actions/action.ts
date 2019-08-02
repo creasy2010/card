@@ -18,7 +18,7 @@ export default (dispatch: Dispatch) => {
      *
      */
     async uploadPic() {
-      上传图片;
+      // 上传图片;
     },
   };
   return action;

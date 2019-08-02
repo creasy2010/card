@@ -18,6 +18,7 @@ import "./index.less";
 
 import example from '@/assets/image/goods.png';
 import CardLabel from "@/common/card-label";
+import * as draw from "@/utils/draw";
 // import TopBack from "@/common/top-back";
 
 type PageStateProps = {
@@ -74,22 +75,26 @@ class Index extends Component<PageOwnProps, PageState> {
   componentWillUnmount() {}
 
   componentDidMount(){
-    // @ts-ignore
-    var ctx = wx.createCanvasContext('topBack');
 
-    // 二次贝塞尔曲线
-    ctx.lineWidth=4.5;
-    ctx.strokeStyle='#0272FC';
-    ctx.fillStyle ="#0272FC";
-    ctx.beginPath();
-    ctx.rect(0, 0, 375*rpx, 24*rpx);
-    ctx.moveTo(0,24*rpx);
-    ctx.quadraticCurveTo(187.5*rpx,(125+24)*rpx,375*rpx,24*rpx);
-    ctx.closePath();
-
-    ctx.fill();
-    ctx.stroke();
-    ctx.draw();
+    //@ts-ignore
+    draw.drawBackLine(wx.createCanvasContext('topBack'));
+    //
+    // // @ts-ignore
+    // var ctx = wx.createCanvasContext('topBack');
+    //
+    // // 二次贝塞尔曲线
+    // ctx.lineWidth=4.5;
+    // ctx.strokeStyle='#0272FC';
+    // ctx.fillStyle ="#0272FC";
+    // ctx.beginPath();
+    // ctx.rect(0, 0, 375*rpx, 24*rpx);
+    // ctx.moveTo(0,24*rpx);
+    // ctx.quadraticCurveTo(187.5*rpx,(125+24)*rpx,375*rpx,24*rpx);
+    // ctx.closePath();
+    //
+    // ctx.fill();
+    // ctx.stroke();
+    // ctx.draw();
   }
 
   componentDidShow() {
@@ -100,7 +105,7 @@ class Index extends Component<PageOwnProps, PageState> {
   render() {
     return (
       <View className="index">
-        <View className={"header"}>
+        <View className={"headerTopBack"}>
           <Canvas
             className={'topBack'}
             canvasId='topBack' />
