@@ -25,6 +25,7 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/my-card/index',
       "pages/index/index",
       'pages/create/index',
     ],

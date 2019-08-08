@@ -79,10 +79,19 @@ export default class Create extends Component<Partial<T.IProps>, any> {
         {/*//     debugger;*/}
         {/*//   },*/}
         {/*// });*/}
-
         {/*}}>TakePhoto</Button>*/}
-        <View>
-          <CircleButton> 下一步</CircleButton>
+
+        <View className="btn-containter-single">
+          <CircleButton >下一步</CircleButton>
+        </View>
+
+        <View className="btn-containter-two">
+          <View>
+            <CircleButton isGray={true}>上一步</CircleButton>
+          </View>
+          <View>
+            <CircleButton > 下一步</CircleButton>
+          </View>
         </View>
       </View>
     );

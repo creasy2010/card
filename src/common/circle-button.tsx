@@ -14,7 +14,8 @@ import PropTypes from 'prop-types';
 import './circle-button.less';
 
 interface ICircleButtonP {
-
+   style?:object;
+   isGray?:boolean;
   [name: string]: any;
 }
 
@@ -32,7 +33,13 @@ export default class CircleButton extends Component<ICircleButtonP, ICircleButto
 
 
   render() {
-    return (<View className="circleButton">
+
+    // let style = {...this.props.style || {}}
+    // if(this.props.isGray) {
+    //   style["backgroundColor"]="#E8E8E8";
+    // }
+
+    return (<View className={"circleButton "+(this.props.isGray?"gray":"")}>
         {this.props.children}
       </View>
     );
