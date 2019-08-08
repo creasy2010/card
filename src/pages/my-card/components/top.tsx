@@ -1,4 +1,4 @@
-import {View, Button, Text} from '@tarojs/components';
+import {View, Button, Text,Image} from '@tarojs/components';
 import Taro, {Component, Config} from '@tarojs/taro';
 
 import * as T from '../types';
@@ -19,7 +19,7 @@ export default class Top extends Component<Partial<ITopProps>, T.ITopState> {
   }
 
   /**
-    
+
 */
   render() {
     let {
@@ -29,7 +29,18 @@ export default class Top extends Component<Partial<ITopProps>, T.ITopState> {
 
     return (
       <View className="top">
-        <View />
+        <View className="topItem">
+          <Image src={""}></Image>
+          <Text>专属名片码</Text>
+        </View>
+        <View className="topItem">
+          <Image src={""}></Image>
+          <Text>访问我名片</Text>
+        </View>
+        <View className="topItem">
+          <Image src={""}></Image>
+          <Text>发给我名片</Text>
+        </View>
       </View>
     );
   }
