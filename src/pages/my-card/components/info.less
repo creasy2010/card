@@ -1,21 +1,42 @@
 
 
 .info {
+  margin-top: 24px;
+  width: 622px;
   padding: 32px;
-  width: 686px;
   height: 808px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 8px 32px 0px rgba(232, 232, 232, 1);
 
+  border-radius: 15px;
 
   .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:15px;
 
+    >Text{
+      height: 64px;
+      color: rgba(40, 40, 40, 1);
+      font-size: 36px;
+      text-align: left;
+      font-family: PingFang-SC-Semibold;
+    }
   }
   .items{
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: left;
+
+
+    .splitLine{
+      margin-left:82px;
+      width: 549px;
+      height: 1px;
+      border-bottom: 1px solid rgba(232, 232, 232, 1);
+    }
 
     >View {
       display: flex;
@@ -24,6 +45,11 @@
       align-items: center;
 
       height:80px;
+      margin: 12px 0;
+      //
+      //>View{
+      //}
+
 
       >Text:nth-child(2){
         margin-left: 32px;
@@ -39,6 +65,7 @@
         margin-left: 32px;
         width: 169px;
         height: 40px;
+        opacity: 70%;
         color: rgba(153, 153, 153, 1);
         font-size: 28px;
         text-align: left;

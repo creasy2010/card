@@ -6,6 +6,7 @@ import './desc.less';
 import actions from '../actions/index';
 import {connect} from '@tarojs/redux';
 import {store2Props} from '../selectors';
+import { AtIcon } from 'taro-ui'
 
 type IDescProps = T.IProps & T.IDescProps;
 
@@ -19,7 +20,7 @@ export default class Desc extends Component<Partial<IDescProps>, T.IDescState> {
   }
 
   /**
-    
+
 */
   render() {
     let {
@@ -29,6 +30,11 @@ export default class Desc extends Component<Partial<IDescProps>, T.IDescState> {
 
     return (
       <View className="desc">
+        <View className="header">
+          <Text>业务介绍</Text>
+          <AtIcon value='clock' size='23' ></AtIcon>
+        </View>
+
         <View />
       </View>
     );

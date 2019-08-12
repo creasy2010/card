@@ -4,26 +4,24 @@
  * @使用场景
  *
  * @company qianmi.com
- * @Date    2019/7/12
+ * @Date    2019/8/12
  **/
 
 import {View, Text, Image} from '@tarojs/components';
 import Taro, {Component} from '@tarojs/taro';
+
 import PropTypes from 'prop-types';
 
-import './circle-button.less';
 
-interface ICircleButtonP {
-   style?:object;
-   isGray?:boolean;
+interface ICardItemP {
   [name: string]: any;
 }
 
-interface ICircleButtonS {
+interface ICardItemS {
   [name: string]: any;
 }
 
-export default class CircleButton extends Component<ICircleButtonP, ICircleButtonS> {
+export default class CardItem extends Component<ICardItemP, ICardItemS> {
   static defaultProps = {};
 
   constructor(props) {
@@ -31,11 +29,12 @@ export default class CircleButton extends Component<ICircleButtonP, ICircleButto
     this.state = {};
   }
 
+  componentDidMount() {}
 
   render() {
-    return (<View className={"circleButton "+(this.props.isGray?"gray":"")}>
-        {this.props.children}
-      </View>
-    );
+    let {} = this.props;
+    return (<View>
+
+    </View> );
   }
 }
