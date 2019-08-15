@@ -1,4 +1,6 @@
-import "@tarojs/async-await";
+
+
+    import "@tarojs/async-await";
 import Taro, { Component, Config } from "@tarojs/taro";
 import { Provider } from "@tarojs/redux";
 
@@ -25,6 +27,7 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/cards/index',
       'pages/my-card/index',
       "pages/index/index",
       'pages/create/index',

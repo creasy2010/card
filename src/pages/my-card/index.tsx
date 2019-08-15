@@ -7,7 +7,6 @@ import * as T from './types';
 import actions from './actions';
 import {store2Props} from './selectors';
 import {registerReducer} from '@/redux/store';
-import { AtCheckbox } from 'taro-ui';
 
 import Photo from './components/photo';
 import Top from './components/top';
