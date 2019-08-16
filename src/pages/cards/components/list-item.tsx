@@ -1,4 +1,4 @@
-import {View, Button, Text} from '@tarojs/components';
+import {View, Button, Text,Image} from '@tarojs/components';
 import Taro, {Component, Config} from '@tarojs/taro';
 
 import * as T from '../types';
@@ -22,7 +22,7 @@ export default class ListItem extends Component<
   }
 
   /**
-    
+
 */
   render() {
     let {
@@ -32,7 +32,12 @@ export default class ListItem extends Component<
 
     return (
       <View className="listItem">
-        <View />
+        <Image src={""}/>
+        <View>
+          <View><Text>陈俊林</Text></View>
+          <View><Text>销售总监</Text></View>
+          <View><Text>深圳市远景达物联网技术有限公司</Text></View>
+        </View>
       </View>
     );
   }

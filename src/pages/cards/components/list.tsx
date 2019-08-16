@@ -33,6 +33,7 @@ export default class List extends Component<Partial<IListProps>, T.IListState> {
     return (
       <View className="list">
         <ListItem/>
+        <ListItem/>
       </View>
     );
   }

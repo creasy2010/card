@@ -1,4 +1,43 @@
 
 
 .listItem {
+  margin: 12px 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 686px;
+  height: 176px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 16px 0px rgba(232, 232, 232, 0.5);
+
+  >Image{
+    width: 112px;
+    height: 112px;
+  }
+
+  >View{
+
+    >View:nth-child(1) Text{
+      width: 108px;
+      height: 48px;
+      color: rgba(40, 40, 40, 1);
+      font-size: 36px;
+      text-align: left;
+      font-family: PingFang-SC-Semibold;
+    }
+
+    >View:nth-child(2) Text{
+      color: rgba(153, 153, 153, 1);
+      font-size: 24px;
+      text-align: left;
+    }
+
+    >View:nth-child(3) Text{
+      color: rgba(153, 153, 153, 1);
+      font-size: 24px;
+      text-align: left;
+    }
+  }
 }
