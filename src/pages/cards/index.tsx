@@ -7,14 +7,9 @@ import * as T from './types';
 import actions from './actions';
 import {store2Props} from './selectors';
 import {registerReducer} from '@/redux/store';
-
 import Top from './components/top';
-
-import TopSummary from './components/top-summary';
-
 import List from './components/list';
 
-import ListItem from './components/list-item';
 
 @connect<Partial<T.IProps>, any>(
   store2Props,
@@ -37,7 +32,8 @@ export default class Cards extends Component<Partial<T.IProps>, any> {
 
     return (
       <View className="cards">
-        <View />
+        <Top></Top>
+        <List></List>
       </View>
     );
   }

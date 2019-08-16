@@ -7,6 +7,9 @@ import actions from '../actions/index';
 import {connect} from '@tarojs/redux';
 import {store2Props} from '../selectors';
 
+
+import ListItem from './list-item';
+
 type IListProps = T.IProps & T.IListProps;
 
 @connect<Partial<IListProps>, T.IListState>(
@@ -19,7 +22,7 @@ export default class List extends Component<Partial<IListProps>, T.IListState> {
   }
 
   /**
-    
+
 */
   render() {
     let {

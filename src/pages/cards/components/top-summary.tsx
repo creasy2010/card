@@ -9,10 +9,7 @@ import {store2Props} from '../selectors';
 
 type ITopSummaryProps = T.IProps & T.ITopSummaryProps;
 
-@connect<Partial<ITopSummaryProps>, T.ITopSummaryState>(
-  store2Props,
-  actions
-)
+@connect<Partial<ITopSummaryProps>, T.ITopSummaryState>(store2Props, actions)
 export default class TopSummary extends Component<
   Partial<ITopSummaryProps>,
   T.ITopSummaryState
@@ -22,17 +19,37 @@ export default class TopSummary extends Component<
   }
 
   /**
-    
-*/
+   *
+   */
   render() {
-    let {
-      actions: {action},
-      main,
-    } = this.props;
+    let {actions: {action}, main} = this.props;
 
     return (
       <View className="topSummary">
-        <View />
+        <View className="item active">
+          <View>
+            6
+          </View>
+          <View>
+            我交换名片
+          </View>
+        </View>
+        <View className="item">
+          <View>
+            6
+          </View>
+          <View>
+            我交换名片
+          </View>
+        </View>
+        <View className="item">
+          <View>
+            6
+          </View>
+          <View>
+            我交换名片
+          </View>
+        </View>
       </View>
     );
   }
